@@ -85,3 +85,17 @@ document.querySelectorAll('.content-section').forEach(s => io.observe(s));
         if (e.key === 'Escape' && !box.hidden) close();
     });
 })();
+
+// Voice tabs
+(function () {
+    const tabs = document.querySelectorAll('.voice-tab');
+    if (!tabs.length) return;
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.voice-panel').forEach(p => p.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+        });
+    });
+})();

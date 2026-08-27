@@ -457,6 +457,61 @@ body.lightbox-open { overflow: hidden; }
     .update-media { max-width: 100%; }
 }
 
+/* ===== Voice tabs & cards ===== */
+.voice-tabs {
+    display: flex; gap: 0.5rem; margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+.voice-tab {
+    padding: 0.55rem 1.15rem; border-radius: 999px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text-soft); font-weight: 600;
+    font-size: 0.9rem; cursor: pointer; font-family: inherit;
+    transition: background var(--transition), color var(--transition), border-color var(--transition), transform 0.2s ease;
+}
+.voice-tab:hover { color: var(--primary); border-color: var(--primary); transform: translateY(-1px); }
+.voice-tab.active {
+    background: var(--primary); color: #fff; border-color: var(--primary);
+}
+[data-theme="dark"] .voice-tab.active { color: #0f1419; }
+
+.voice-panel { display: none; }
+.voice-panel.active { display: block; }
+
+.voice-head { margin-bottom: 0.75rem; }
+.voice-head h3 { margin: 0 0 0.15rem; font-size: 1.1rem; }
+.voice-role { color: var(--text-soft); font-size: 0.88rem; margin: 0 0 0.4rem !important; }
+
+.voice-quote {
+    margin: 0; padding: 0 0 0 1rem;
+    border-left: 3px solid var(--primary);
+}
+.voice-quote p {
+    font-style: italic; font-size: 0.95rem; line-height: 1.7;
+    color: var(--text-soft); margin: 0 0 0.7rem;
+}
+.voice-quote p:last-child { margin-bottom: 0; }
+
+.voice-links {
+    margin-top: 0.85rem !important; font-size: 0.88rem; font-weight: 600;
+}
+.voice-links a {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    color: var(--primary);
+}
+.voice-links a:hover { text-decoration: none; color: var(--primary-dark); }
+.voice-links .fa-file-pdf { color: #dc2626; }
+
+/* LinkedIn recommendation cards */
+.voice-card.linkedin-reco { border-top: 3px solid #0a66c2; }
+.voice-date { display: inline-block; margin-top: .5rem; font-size: .82rem; color: #0a66c2; font-weight: 500; }
+.voice-date .fa-linkedin { margin-right: .25rem; }
+[data-theme="dark"] .voice-date { color: #5eb1ef; }
+
+.linkedin-verify { text-align: center; margin-bottom: 1.5rem; }
+.linkedin-verify a { display: inline-flex; align-items: center; gap: .4rem; background: #0a66c2; color: #fff; padding: .55rem 1.2rem; border-radius: 2rem; font-size: .9rem; font-weight: 600; text-decoration: none; transition: background .2s; }
+.linkedin-verify a:hover { background: #004182; }
+.linkedin-verify .fa-linkedin { font-size: 1.05rem; }
+
 /* ===== Responsive ===== */
 @media (max-width: 820px) {
     .nav-toggle { display: flex; }
