@@ -358,6 +358,29 @@ a.contact-item:hover { border-color: var(--primary); background: var(--primary-s
 .lightbox-close:hover { background: rgba(255, 255, 255, 0.25); transform: rotate(90deg); }
 body.lightbox-open { overflow: hidden; }
 
+/* ===== Result table ===== */
+.result-table-wrap { overflow-x: auto; margin: 0 0 0.85rem; }
+.result-table {
+    width: 100%; border-collapse: collapse;
+    font-size: 0.9rem; min-width: 340px;
+}
+.result-table th, .result-table td {
+    text-align: left; padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+}
+.result-table thead th {
+    font-weight: 700; font-size: 0.76rem; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--primary-dark);
+    background: var(--primary-soft); white-space: nowrap;
+}
+.result-table thead th:first-child { border-top-left-radius: 8px; }
+.result-table thead th:last-child  { border-top-right-radius: 8px; }
+.result-table tbody td { color: var(--text-soft); }
+.result-table tbody tr:last-child td { border-bottom: 0; }
+.result-table tbody tr { transition: background var(--transition); }
+.result-table tbody tr:hover { background: var(--primary-soft); }
+.result-table tbody tr:hover td { color: var(--text); }
+
 /* ===== Career updates timeline ===== */
 .update-list {
     display: flex; flex-direction: column; gap: 0;
